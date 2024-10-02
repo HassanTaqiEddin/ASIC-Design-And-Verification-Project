@@ -1,1 +1,2 @@
-
+# MIPS Machine Code Converter
+The MIPS Machine Code Converter is a tool in Python that transforms MIPS assembly language instructions into machine code, enabling execution on MIPS architecture. This converter supports various instruction formats. The tool outputs machine code for debugging, streamlining the development and testing process for hardware design projects. Its user-friendly interface enhances accessibility for both beginners and experienced developers.
