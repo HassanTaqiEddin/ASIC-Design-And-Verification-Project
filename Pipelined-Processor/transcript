@@ -1,0 +1,109 @@
+# Compile of adder32Bit.v was successful.
+# Compile of ALU.v was successful.
+# Compile of comparator.v was successful.
+# Compile of ControlUnit.v was successful.
+# Compile of dataMemory.v was successful.
+# Compile of EX_MEM_pipe.v was successful.
+# Compile of Forwarding.v was successful.
+# Compile of HazardDetectionUnit.v was successful.
+# Compile of ID_EX_pipe.v was successful.
+# Compile of IF_ID_pipe.v was successful.
+# Compile of InstMemory.v was successful.
+# Compile of MEM_WB_pipe.v was successful.
+# Compile of mux2x1.v was successful.
+# Compile of mux4x1.v was successful.
+# Compile of mux5bit.v was successful.
+# Compile of pcReg.v was successful.
+# Compile of RegisterFile.v was successful.
+# Compile of shifter26.v was successful.
+# Compile of shifter32.v was successful.
+# Compile of SignExtender.v was successful.
+# Compile of top.v was successful.
+# Compile of top_tb.v was successful.
+# 22 compiles, 0 failed with no errors.
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=\"+acc\" work.top_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" work.top_tb 
+# Start time: 18:15:00 on Sep 22,2024
+# Loading work.top_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# Loading work.top
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# Loading work.pcReg
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# Loading work.adder32Bit
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# Loading work.Instruction_Memory
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# Loading work.IF_ID_pipe
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# Loading work.ControlUnit
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# Loading work.RegisterFile
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# Loading work.shifter26
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# Loading work.SignExtender
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# Loading work.shifter32
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# Loading work.comparator
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# Loading work.HazardDetectionUnit
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# Loading work.mux2x1
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# Loading work.ID_EX_pipe
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# Loading work.mux4x1
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# Loading work.ALU
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# Loading work.forwardingUnit
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# Loading work.mux5bit
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# Loading work.EX_MEM_pipe
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# Loading work.dataMemory
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+# Loading work.MEM_WB_pipe
+# ** Error (suppressible): (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# No such file or directory. (errno = ENOENT)
+do {D:/Summer Training/Verilog/T7/wave.do}
+run -all
+# ** Note: $stop    : D:/Summer Training/Verilog/T7/top_tb.v(26)
+#    Time: 5020 ns  Iteration: 0  Instance: /top_tb
+# Break in Module top_tb at D:/Summer Training/Verilog/T7/top_tb.v line 26
+# End time: 18:21:35 on Sep 22,2024, Elapsed time: 0:06:35
+# Errors: 27, Warnings: 2

@@ -1,0 +1,33 @@
+
+module forwardingUnit (Ex_RsAddress, Ex_RtAddress, MEM_WBAddress,MEM_RegWriteEn,
+						WB_WBAddress,WB_RegWriteEn,
+						forwardSelA,forwardSelB,reset);
+						
+	input [4:0] Ex_RsAddress,Ex_RtAddress;
+	input [4:0] MEM_WBAddress,WB_WBAddress;
+	input MEM_RegWriteEn,WB_RegWriteEn;
+	input reset;
+	
+	output [1:0] forwardSelA,forwardSelB;
+
+	
+
+	assign forwardSelA[0] =
+	(!reset) ? 1'b0 : 
+	(MEM_RegWriteEn && (MEM_WBAddress == Ex_RsAddress) && ( MEM_WBAddress !=0) )? 1'b1 : 1'b0;
+	
+	assign forwardSelA[1] =
+	(!reset) ? 1'b0 : 
+	(MEM_RegWriteEn && (WB_WBAddress == Ex_RsAddress) &&	
+	((MEM_WBAddress != Ex_RsAddress) ||	( MEM_WBAddress == 0)) && (WB_WBAddress!=0)) ? 1'b1 :1'b0;
+	
+	assign forwardSelB[0] =
+	(!reset) ? 1'b0 : 
+	(MEM_RegWriteEn && (MEM_WBAddress == Ex_RtAddress) && ( MEM_WBAddress != 0) )? 1'b1 : 1'b0;
+	
+	assign forwardSelB[1] =
+	(!reset) ? 1'b0 : 
+	(MEM_RegWriteEn && (WB_WBAddress == Ex_RtAddress) &&	
+	((MEM_WBAddress != Ex_RtAddress) ||	( MEM_WBAddress == 0)) && (WB_WBAddress!=0)) ? 1'b1 :1'b0;
+	
+endmodule 

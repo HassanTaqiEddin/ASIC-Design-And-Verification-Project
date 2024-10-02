@@ -1,0 +1,141 @@
+{D:/Summer Training/Verilog/T6/top.v} {1 {vlog -work work -stats=none {D:/Summer Training/Verilog/T6/top.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}} {D:/Summer Training/Verilog/T6/dataMemory.v} {1 {vlog -work work -stats=none {D:\Summer Training\Verilog\T6\dataMemory.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module dataMemory
+
+Top level modules:
+	dataMemory
+
+} {} {}} {D:/Summer Training/Verilog/T6/adder32Bit.v} {1 {vlog -work work -stats=none {D:/Summer Training/Verilog/T6/adder32Bit.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module adder32Bit
+
+Top level modules:
+	adder32Bit
+
+} {} {}} {D:/Summer Training/Verilog/T6/ID_EX_pipe.v} {1 {vlog -work work -stats=none {D:/Summer Training/Verilog/T6/ID_EX_pipe.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ID_EX_pipe
+
+Top level modules:
+	ID_EX_pipe
+
+} {} {}} {D:/Summer Training/Verilog/T6/InstMemory.v} {1 {vlog -work work -stats=none {D:/Summer Training/Verilog/T6/InstMemory.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Instruction_Memory
+
+Top level modules:
+	Instruction_Memory
+
+} {} {}} {D:/Summer Training/Verilog/T6/IF_ID_pipe.v} {1 {vlog -work work -stats=none {D:/Summer Training/Verilog/T6/IF_ID_pipe.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module IF_ID_pipe
+
+Top level modules:
+	IF_ID_pipe
+
+} {} {}} {D:/Summer Training/Verilog/T6/top_tb.v} {1 {vlog -work work -stats=none {D:/Summer Training/Verilog/T6/top_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module top_tb
+
+Top level modules:
+	top_tb
+
+} {} {}} {D:/Summer Training/Verilog/T6/pcReg.v} {1 {vlog -work work -stats=none {D:/Summer Training/Verilog/T6/pcReg.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module pcReg
+
+Top level modules:
+	pcReg
+
+} {} {}} {D:/Summer Training/Verilog/T6/ControlUnit.v} {1 {vlog -work work -stats=none {D:/Summer Training/Verilog/T6/ControlUnit.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ControlUnit
+
+Top level modules:
+	ControlUnit
+
+} {} {}} {D:/Summer Training/Verilog/T6/ALU.v} {1 {vlog -work work -stats=none {D:/Summer Training/Verilog/T6/ALU.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} {D:/Summer Training/Verilog/T6/MEM_WB_pipe.v} {1 {vlog -work work -stats=none {D:/Summer Training/Verilog/T6/MEM_WB_pipe.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MEM_WB_pipe
+
+Top level modules:
+	MEM_WB_pipe
+
+} {} {}} {D:/Summer Training/Verilog/T6/RegisterFile.v} {1 {vlog -work work -stats=none {D:/Summer Training/Verilog/T6/RegisterFile.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module RegisterFile
+
+Top level modules:
+	RegisterFile
+
+} {} {}} {D:/Summer Training/Verilog/T6/shifter26.v} {1 {vlog -work work -stats=none {D:/Summer Training/Verilog/T6/shifter26.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module shifter26
+
+Top level modules:
+	shifter26
+
+} {} {}} {D:/Summer Training/Verilog/T6/mux2x1.v} {1 {vlog -work work -stats=none {D:/Summer Training/Verilog/T6/mux2x1.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mux2x1
+
+Top level modules:
+	mux2x1
+
+} {} {}} {D:/Summer Training/Verilog/T6/mux5bit.v} {1 {vlog -work work -stats=none {D:/Summer Training/Verilog/T6/mux5bit.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mux5bit
+
+Top level modules:
+	mux5bit
+
+} {} {}} {D:/Summer Training/Verilog/T6/mux4x1.v} {1 {vlog -work work -stats=none {D:/Summer Training/Verilog/T6/mux4x1.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mux4x1
+
+Top level modules:
+	mux4x1
+
+} {} {}} {D:/Summer Training/Verilog/T6/EX_MEM_pipe.v} {1 {vlog -work work -stats=none {D:\Summer Training\Verilog\T6\EX_MEM_pipe.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module EX_MEM_pipe
+
+Top level modules:
+	EX_MEM_pipe
+
+} {} {}} {D:/Summer Training/Verilog/T6/SignExtender.v} {1 {vlog -work work -stats=none {D:/Summer Training/Verilog/T6/SignExtender.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module SignExtender
+
+Top level modules:
+	SignExtender
+
+} {} {}} {D:/Summer Training/Verilog/T6/comparator.v} {1 {vlog -work work -stats=none {D:/Summer Training/Verilog/T6/comparator.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module comparator
+
+Top level modules:
+	comparator
+
+} {} {}} {D:/Summer Training/Verilog/T6/shifter32.v} {1 {vlog -work work -stats=none {D:/Summer Training/Verilog/T6/shifter32.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module shifter32
+
+Top level modules:
+	shifter32
+
+} {} {}}

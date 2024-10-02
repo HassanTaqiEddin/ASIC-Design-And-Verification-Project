@@ -1,0 +1,15 @@
+module Instruction_Memory(PC, instruction);
+
+	input [31:0] PC; 
+	output [31:0] instruction; 
+	reg [31:0] instruction; 
+	reg [31:0] IM [255:0]; 
+	
+	
+ initial begin
+	$readmemh("instructionMem.txt", IM); 
+ end
+	
+	always @ (PC) 
+		 instruction = IM[PC>>2]; 
+endmodule 

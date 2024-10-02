@@ -1,0 +1,164 @@
+`timescale 1ns/1ps
+
+module top_tb ();
+
+
+	// Performance metrics
+	reg [31:0] cycles;
+	reg [31:0] flsh;
+	reg [31:0] stallsNum;
+	reg [31:0] numOfexecuted;
+	reg [31:0] forwardings;
+	reg [31:0] branches;
+	reg [31:0] numOfJump;
+	reg [31:0] memAccess;
+
+	// define clock and reset
+	reg clock, reset;
+
+
+	// instantiation for processor module
+	top processor (.clk(clock), .reset(reset));
+
+	// block to initialize signals  
+	initial begin
+		flushes <= 5'b0;
+		dontPrint <= 1'b0;
+		finish <= 1'b0;
+		clock <= 1'b0;
+		reset <= 1'b0;
+		#20 reset <= 1'b1;
+	end
+	
+	
+		// always block for general information
+	always @(posedge clock) begin
+	
+		// increment counter of cycles
+		cycles = cycles + 1;
+			
+		// increment counter of flushed instruction, according to situation
+		#1
+		if(processor.flush)
+			flsh = flsh +1;
+		if(processor.stall)
+			stallsNum  <= stallsNum +1;
+		if(processor.Branch)
+			branches <= branches+1;
+		if(processor.Jump)
+			numOfJump <= numOfJump+1;
+		if(processor.MEM_MemWriteEn | processor.MEM_MemReadEn)
+			memAccess <= memAccess+1;
+		if((processor.forwardSelA[0] | processor.forwardSelA[1] | processor.forwardSelB[0] | processor.forwardSelB[1]) & !processor.Ex_ALUSrc)
+			forwardings<=forwardings+1;
+		
+	end
+	always @ (*) begin
+	
+		numOfexecuted <= (cycles - 5 - numOfFlushed - numOfStalls);
+	end
+	
+	always @(posedge clock)
+	begin
+		if(processor.instMemOut === 32'hffffffff) begin
+			if((processor.pcOut > 1) && (processor.instMemOut === 32'bx))
+			begin 
+				$display ("code finished at time %0t ns, stopped simulating\n", $time);
+				$display ("General information : ");
+				$display ("number of Cycles needed to execute benchmark : %h", cycles -1);
+				$display ("number of Executed instructions in this benchmark : %h",numOfexecuted);
+				$display ("number of Flushed instructions in this benchmark : %h\n", flsh);
+				$display ("number of Stalls in this benchmark : %h\n", stallsNum);
+				$display ("number of Branch instructions in this benchmark : %h\n", branches);
+				$display ("number of Jump instructions in this benchmark : %h\n", numOfJump);
+				$display ("number of Memory Access instructions in this benchmark(LW,SW) : %h\n", memAccess);
+				$display ("number of Forwardings in this benchmark : %h\n", forwardings);
+				$display ("Clock Frequency : 50 MHZ ");
+				$display ("Clock Period    : 20 ns  ");
+				$display ("CPU Time        : %0d ns ",(cycles -1)*20);
+				$stop;
+			end
+		end
+	end
+
+	always begin
+		#10 clock <= ~clock;
+	end
+	
+	
+	// always block for printing information
+	always @(posedge clock) begin
+
+			// for fetch stage
+			
+			$display("# Fetch Stage: ");
+			
+			// printing program counter
+
+			// printing instruction memory outputs 
+			$display("Instruction at fetched stage : 0x%h", processor.instMemOut);
+			$display("PC : 0x%0h", processor.pcOut);
+
+			$display(" ");
+			
+			// for decode stage
+			$display("# Decode Stage:");
+			
+			// printing instructions
+			$display("Instruction in decode stage : 0x%h", processor.decode_instMemOut);
+			$display("Opcode: 0x%h",processor.opCode );
+			$display("Rs: 0x%h",processor.rsAddress,"\t Rt:0x%h",processor.rtAddress,"\t Rd:0x%h",processor.rdAddress);
+			$display("ReadData1: 0x%h",processor.data1,"\t ReadData2: 0x%h",processor.data2);
+
+			$display(" ");
+			
+			// for execute stage 
+			$display("# Execute Stage:");
+			$display("ALU Operand1: 0x%h",processor.forwardMuxAout);
+			$display("ALU Operand2: 0x%h",processor.Mux4out);
+			$display("ALU opeartion: 0x%h",processor.Ex_ALUOp);
+			$display("ALU Results: 0x%h",processor.ALUOut);
+
+						
+			$display(" ");
+			
+			// for memory stage 
+			$display("# Memory Stage:");
+			// display memory status (write)
+			// for instruction 1 
+			$display("instruction  Write on Memory: %s", processor.MEM_MemWriteEn ? "Yes" : "No");
+			if (processor.MEM_MemWriteEn) begin
+				$display ("Write on address : %h", processor.MEM_ALUOut);
+				$display ("Written data : %h", processor.MEM_data2);
+			end
+
+			// display memory status (Read)
+			// for instruction 1
+			$display("instruction Read from Memory: %s", processor.MEM_MemReadEn ? "Yes" : "No");
+			if (processor.MEM_MemReadEn)begin
+				$display ("Read from address : %h", processor.MEM_ALUOut);
+				$display ("data Read  : %h", processor.dataMemOut);
+			end
+
+	
+			$display(" ");
+			
+			// for write back stage
+			$display("# Write Back Stage: ");
+			 
+			// display register file status
+			// for instruction 1
+			$display("instruction Write on register file: %s", processor.WB_RegWriteEn ? "Yes" : "No");
+			if (processor.WB_RegWriteEn) begin 
+				$display ("Write on register number : %h", processor.WB_WBAddress);
+				$display ("Value written on register : %h", processor.Mux6out);
+			end
+
+
+			$display("**************************************************************************************************");
+		
+		
+	end
+
+
+endmodule
