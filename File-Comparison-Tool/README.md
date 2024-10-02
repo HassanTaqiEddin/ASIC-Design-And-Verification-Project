@@ -1,1 +1,2 @@
-
+# File Comparison Tool
+This Python script compares two text files, cycle.txt and simulation.txt, It identifies mismatches, checks if the files differ in length, and reports any differences in the instruction sequences. The script is useful for verifying consistency between cycle-accurate simulation outputs and Verilog model simulations by highlighting discrepancies in the instruction flow. The results are printed line-by-line for easier debugging and verification.
