@@ -1,1 +1,2 @@
-a
+# Cycle-Accurate Simulator
+This C++ simulator accurately models the behavior of a pipelined processor at each clock cycle, closely mirroring real hardware operation. It supports all 22 MIPS instructions and features file handling, error checking, and performance metric calculations. The simulator effectively manages instruction timing and data transfers while addressing dependencies like forwarding and hazards, providing insights into processor performance and aiding in design verification.
