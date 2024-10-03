@@ -5,3 +5,7 @@ The Pipelined Processor is an advanced architecture designed to improve instruct
 ## Note: 
 ### This Processor is used DE10-Lite FPGA, however the project has more than top module, one for FPGA (top_fpga) and other for simulation (top), change between them if you want to test (Emulation or Simulation).
 ### Used tools are Quartus, Modelsim.
+
+![image](https://github.com/user-attachments/assets/5f9cf8c4-e9ed-4964-812b-b4f686602584)
+
+
