@@ -31,7 +31,7 @@ This project focuses on designing and verifying a MIPS pipelined processor with 
 - **Performance Metrics:** Detailed reports on processor performance.
 
 ## This is video that explain the project and training
-https://drive.google.com/drive/u/1/folders/1q66yG2PalOV3UQ-sPLlYkbtbJJjBeqIJ
+https://drive.google.com/file/d/1X0cYufguWIlIIvuG20TtW8Q3OMLTI5F2/view?usp=sharing
 
 
 
