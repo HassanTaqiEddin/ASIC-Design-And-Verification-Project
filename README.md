@@ -30,6 +30,11 @@ This project focuses on designing and verifying a MIPS pipelined processor with 
 - **Hazard Handling:** Includes flush logic for control hazards (e.g., jumps).
 - **Performance Metrics:** Detailed reports on processor performance.
 
+## This is video that explain the project and training
+https://drive.google.com/drive/u/1/folders/1q66yG2PalOV3UQ-sPLlYkbtbJJjBeqIJ
+
+
+
 ## Setup & Installation
 1. Clone the repository:
    ```bash
